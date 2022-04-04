@@ -70,9 +70,6 @@ a {
   text-decoration: none;
 }
 
-img {
- 
-}
 
 span{
   color:var(--first-color)!important;
@@ -285,9 +282,9 @@ flex-wrap: wrap;
   width: 65vw;
 }
 
-.diferencial-cards{
+/*.diferencial-cards{
   
-}
+}*/
 
 .diferencial-titulo{
 font-family: var(--body-font);
