@@ -193,6 +193,7 @@ width: 100vw;
   font-weight: bolder;
   text-align: center;
   font-size: 2rem;
+  padding: 10px;
 }
 
 .banner-container h2{
@@ -235,7 +236,7 @@ width: 100vw;
   font-size: 3.5rem;
   margin-top: 50px;
   margin-bottom: 50px;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid rgb(8, 7, 7);
   text-align: center;
 }
 
@@ -268,6 +269,10 @@ flex-wrap: wrap;
   background-color: var(--first-color);
   color: white;
 }
+
+.nosso-diferencial{
+border-bottom: 1px solid rgb(255, 255, 255);
+}
 .diferenciais-container h3{
   text-align: center;
   width: 100vw;
@@ -281,10 +286,6 @@ flex-wrap: wrap;
   justify-content: space-evenly;
   width: 65vw;
 }
-
-/*.diferencial-cards{
-  
-}*/
 
 .diferencial-titulo{
 font-family: var(--body-font);
@@ -322,22 +323,56 @@ font-size: 1.8rem;
 
 /*=============== SERVICES ===============*/
 
+.services-container{
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.services-h1{
+  display: inline-block;
+  align-self: center; 
+  margin-bottom: 0;
+}
+.services-container p{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: max(18px, 1.1vw);
+  font-weight: 300;
+  width: 50vw;
+}
+
+
 .services-flex{
-  width: 100vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  overflow-x: auto;
+  width: 100vw;
+  position: relative;
 }
 
 .services-flex picture{
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  width: 350px;
-  margin: 10px;
+  flex-shrink: 0;
+  background-color: var(--first-color);
+  margin-left: 1.4rem;
+  cursor: pointer;
 }
-.services-flex caption{
+
+
+.services-flex h1{
   text-align: center;
+  color: white;
+  background-color: var(--first-color);
+  width: 100%;
+  font-size: 1.2em ;
+  align-self: center;
+}
+
+.services-flex img{
+  width: 382px;
 }
 
 
@@ -369,7 +404,7 @@ font-size: 1.8rem;
   color: white;
   right: 1rem;
   bottom: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
   background-color: forestgreen;
   backdrop-filter: blur(16px);
   display: inline-flex;
@@ -377,6 +412,7 @@ font-size: 1.8rem;
   padding: .45rem;
   z-index: var(--z-tooltip);
   transition: .4s;
+  animation: zap .5s ease-in 0s infinite alternate;
 }
 
 .fixed_icon:hover{
@@ -395,8 +431,62 @@ font-size: 1.8rem;
   .sobre-text p{
     width: 400px;
   }
+  .nosso-diferencial{
+    font-size: 2.5rem;
+  }
+
+  .diferencial-cards{
+  margin-bottom: 50px;
+  }
+  .diferenciais-container h3{
+    margin-bottom: 50px;
+  }
+  .services-flex::after{
+    content: "\f061";
+    padding: 8px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 26px;
+    margin-right: 10px;
+    color: white;
+    background-color: var(--first-color);
+    position: absolute;
+    right: 250px;
+    top: 10px;
+    cursor: pointer;
+    opacity: 0.5;
+    animation: arrow .5s ease-in 0s infinite alternate;
+  }
+
+  @keyframes arrow {
+    from{
+      right: 5.2rem;
+    }
+    to{
+      right: 3.2rem;
+    }
+  }
+
 }
 
+@keyframes zap {
+  from{
+    bottom: 3.8rem;
+  }
+  to{
+    bottom: 3.0rem;
+  }
+}
+
+@media (max-width: 1200px) {
+.services-flex{
+  display: flex;
+  overflow-x: auto;
+  width: 100vw;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+}
 @media (max-width: 409px) {
   .banner-container img {
     width: 250px;
