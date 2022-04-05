@@ -94,14 +94,21 @@ span{
   z-index: 1;
 }
 
+.headings{
+  background-color: var(--first-color);
+  width: 100vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .headings-infos{ 
 display: flex;
-justify-content: space-evenly;
+justify-content: space-between;
 align-items: center;
-flex-flow: wrap;
-background-color: var(--first-color);
+flex-flow: wrap column;
 text-align: center;
-width: 100vw;
+max-width: 1000px;
+margin: 0 auto;
 }
 
 .headings-infos p{
@@ -114,16 +121,19 @@ width: 100vw;
 .social i{
   color: white;
   font-size:1.5rem;
+  width: 100%;
 }
 
 .nav-container {
   height: 100%;
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   font-family: var(--body-font);
   background: white;
+  max-width: 1185px;
+  margin: 0 auto;
 }
 
 .logo img{
@@ -179,12 +189,13 @@ width: 100vw;
 
 .banner-container{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
   flex-flow: wrap;
   background-color: #336699;
   height: 40vh;
   width: 100%;
+  margin: 0 auto;
 }
 
 .banner-container h1{
@@ -193,7 +204,7 @@ width: 100vw;
   font-weight: bolder;
   text-align: center;
   font-size: 2rem;
-  padding: 10px;
+  
 }
 
 .banner-container h2{
@@ -225,14 +236,13 @@ width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%; 
   margin-bottom: 50px;
-  width: 100%;
 }
 
 .titulos{
-  display: grid;
-  justify-self: center;
+
   font-family: var(--body-font);
   font-weight: lighter;
   font-size: 3.5rem;
@@ -247,6 +257,8 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
+max-width: 1200px;
+margin: 0 auto;
 }
 
 .sobre-text img{
@@ -286,7 +298,9 @@ border-bottom: 1px solid rgb(255, 255, 255);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 65vw;
+  width: 100%;
+  max-width: 1230px;
+  margin: 0 auto;
 }
 
 .diferencial-titulo{
@@ -352,8 +366,9 @@ align-items: center;
   justify-content: center;
   align-items: center;
   overflow-x: auto;
-  width: 100vw;
   position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .services-flex picture{
@@ -374,7 +389,7 @@ align-items: center;
 }
 
 .services-flex img{
-  width: 382px;
+  width: 372px;
 }
 
 
@@ -451,7 +466,7 @@ margin-right:10px ;
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
-@media (max-width: 810px) {
+@media (max-width: 840px) {
   .banner-container img {
     width: 300px;
     margin-right: 60px;
@@ -516,11 +531,13 @@ margin-right:10px ;
   align-items: flex-start;
 }
 }
-@media (max-width: 409px) {
+@media (max-width: 439px) {
   .banner-container img {
     width: 250px;
-    margin-right: 60px;
-    margin-bottom: 20px;
+     
+  }
+  .banner-container h1{
+    font-size: 1.5rem;
   }
 }
 
@@ -530,7 +547,7 @@ margin-right:10px ;
   }
   .nav-list {
     position: absolute;
-    top: 15.2vh;
+    top: 15.7vh;
     right: 0;
     width: 40vw;
     height: 85vh;
