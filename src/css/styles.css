@@ -231,6 +231,8 @@ width: 100vw;
 }
 
 .titulos{
+  display: grid;
+  justify-self: center;
   font-family: var(--body-font);
   font-weight: lighter;
   font-size: 3.5rem;
@@ -376,26 +378,53 @@ align-items: center;
 }
 
 
+/*=============== GALLERY ===============*/
+.galeria{
+  background-color: var(--first-color);
+  padding-bottom: 50px;
+}
 
-/*=============== BUTTON ===============*/
+.gallery-text {
+display: flex;
+align-items: center;
+justify-content: center; 
+flex-direction: column;
+}
 
+.gallery-text h1{
+  color: white;
+  border-bottom: 1px solid white;
+}
 
-/*=============== FEATURES ===============*/
-  
-
-/*=============== FEATURED ===============*/
-
-
-/*=============== OFFER ===============*/
-
-
-/*=============== LOGOS ===============*/
-
-
+.gallery-text p{
+  margin-bottom: 50px;
+  text-align: center;
+  font-family: var(--body-font);
+  font-size: max(18px, 1.1vw);
+  font-weight: 300;
+  color: white;
+}
 /*=============== FOOTER ===============*/
+footer{
+  margin-top: 15vh;
+  height: 35vh;
+  width: 100vw;
+  background-color: white; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-infos{
+width: 30vw;
+margin-right:10px ;
+}
+
+.localizacao{
+  width: 100%;
+}
 
 
-/*=============== SCROLL BAR ===============*/
 
 
 /*=============== FIXED ICON ===============*/

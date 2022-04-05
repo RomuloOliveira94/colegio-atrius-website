@@ -89,14 +89,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html",
-    "build": "parcel src/index.html"
+    "start": "parcel src/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "parcel": "^2.4.1"
+    "parcel": "^2.4.1",
+    "prettier": "2.6.2"
   }
 }
