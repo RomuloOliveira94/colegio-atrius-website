@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-    <html lang="en">
+    <html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <!--=============== FAVICON ===============-->
         <link rel="shortcut icon" href="img/atrius-favicon.ico" type="image/x-icon">
         <!--=============== ICONS ===============-->
@@ -16,7 +16,7 @@
         <!--=============== MOBILE NAVBAR ===============-->
         <script type="module" src="js/mobile-navbar.js"></script>
         <!--=============== SCROLL REVEAL ===============-->
-        <script type="module" src="js/scrollreveal.min.js"></script>
+        <script src="./js/scrollreveal.min.js"></script>
 
         <title>Colégio Atrius</title>
     </head>
@@ -27,9 +27,9 @@
               <div class="headings-infos">
                   <p><i class="ri-map-pin-line"></i> Rua Paulo Firmeza, 1290 - São João do Tauape  CEP. 60130-421 - Fortaleza/CE</p>
                   <div class="social">
-                      <a href="#"><i class="ri-instagram-line"></i></a>
-                      <a href="#"><i class="ri-facebook-box-fill"></i></a>
-                      <a href="#"><i class="ri-whatsapp-line"></i></a>
+                      <a href="https://www.instagram.com/colegio_atrius/" target="_blank"><i class="ri-instagram-line"></i></a>
+                      <a href="https://www.facebook.com/InstitutoAtrius" target="_blank"><i class="ri-facebook-box-fill"></i></a>
+                      <a href="https://wa.me/5585985962220?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+col%C3%A9gio." target="_blank"><i class="ri-whatsapp-line"></i></a>
               </div>
             </div>
             </div>
@@ -62,14 +62,14 @@
                     <h1>"Educamos para a vida!"</h1>
                     <h2>Colégio <strong>Atrius</strong></h2>
                 </div>
-                <img src="https://hcljigsaw.com/wp-content/uploads/2021/02/home-1.png" alt="estudante">
+                <img src="https://hcljigsaw.com/wp-content/uploads/2021/02/home-1.png" alt="estudante" class="banner-img">
             </div>
 
             <!--==================== ABOUT ====================-->
             <section class="about section" id="sobre">
                  <h1 class="titulos">Sobre <span><strong>nós</strong></span></h1>
                 <div class="sobre-text">
-                    <img src="img/sobre-resized.jpg" alt="faixada da escola">
+                    <img src="img/sobre-resized.jpg" alt="alunos do atrius" class="banner-sobre">
                     <div class="paragrafos-sobre">
                         <p>
                         O Colégio <span><strong>Atrius</strong></span> é uma instituição tradicional localizada na cidade de Fortaleza, estado do Ceará.
@@ -92,26 +92,26 @@
                 <section class="diferenciais-container">
                     <h1 class="titulos nosso-diferencial">Nossos <strong>Diferenciais</strong></h1>
                     <div class="diferencial-container">
-                        <div class="diferencial-cards">
+                        <div class="diferencial-cards dif-01">
                             <h2 class="diferencial-titulo diferencial-titulo--comp">Compromisso</h2>
                             <p class="diferencial-texto">O Colégio <strong>Atrius</strong>, tem compromisso real com a educação de seus estudantes.</p>
                         </div>
-                        <div class="diferencial-cards">
+                        <div class="diferencial-cards dif-02">
                             <h2 class="diferencial-titulo diferencial-titulo--met">Metodologia</h2>
                             <p class="diferencial-texto">Nossa metodologia educacional é adaptada a realidade de cada aluno.</p>
                         </div>
-                        <div class="diferencial-cards">
+                        <div class="diferencial-cards dif-03">
                             <h2 class="diferencial-titulo diferencial-titulo--prof">Professores</h2>
                             <p class="diferencial-texto">Os professores são responsáveis por didáticas de ensino que trabalham conforme a necessidades de cada um desses alunos.</p>
                         </div>
                         
                     </article>
-                    <h3>"Aqui cada estudante é único."</h3>
+                    <h3 class="footer-dif">"Aqui cada estudante é único."</h3>
                 </section>
             </section>
 
             <!--==================== OFFER ====================-->
-            <section class="offer section">
+            <section class="offer section" id="ensino">
                 <div class="services-container">
                 <h1 class="titulos services-h1">Serviços <span><strong>Educacionais</strong></span></h1>
                     
@@ -142,7 +142,7 @@
             </section>
 
              <!--==================== galeria ====================-->
-             <div class="galeria section">
+             <div class="galeria section" id="galeria">
                 <div class="gallery-text">
                     <h1 class="titulos">Galeria</h1>
                     <p>Conheça nossa escola!</p>
@@ -293,23 +293,28 @@
       </div>
     </div>
 </div>
-
         </main>
-
-
         <!--==================== FOOTER ====================-->
-        <footer class="footer">
-            <div class="footer-infos">
-                <h1>Contato</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut atque voluptatibus iusto, hic vitae quaerat harum obcaecati sed, distinctio adipisci excepturi at voluptatum. Consequuntur praesentium consectetur fugit iure sapiente excepturi!</p>
-            </div>
-            <section>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15924.976610976286!2d-38.5076979!3d-3.7569452!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f0a3aa0c05d8ebc!2sInstituto%20Atrius!5e0!3m2!1spt-BR!2sbr!4v1649122529216!5m2!1spt-BR!2sbr" width="300" height="250" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="localizacao"></iframe>
-            </section>
+        <footer class="footer" id="contato">
+          <div class="footer-infos">
+            <div class="localizacao-c"><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15924.976610976286!2d-38.5076979!3d-3.7569452!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f0a3aa0c05d8ebc!2sInstituto%20Atrius!5e0!3m2!1spt-BR!2sbr!4v1649122529216!5m2!1spt-BR!2sbr" width="1920" height="1080" style="border:0;" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="localizacao"></iframe></div>
+              <div class="footer-text">
+                  <h1 class="titulos">Contato</h1>
+                  <h2>Onde estamos:</h2>
+                  <h3>Rua Paulo Firmeza, 1290 - São João do Tauape - Fortaleza/CE</h3>
+                  <h2>Telefones:</h2>
+                  <h3>Fixo: 32225568</h3>
+                  <h3>Cel: (85)98596-2220/(85)9684-9785</h3>
+                  <a href="https://wa.me/5585985962220?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+col%C3%A9gio." target="_blank"><button class="footer-btn">Fale Conosco!</button></a>
+              </div>
+          </div>
+          <aside class="footer-rights">
+            <span class="footer-rights--text"><i class="fa-solid fa-copyright"></i>Copyright 2022 - Colégio Atrius - Desenvolvido por <a href="https://linkr.bio/rolive94" target="_blank">ROLIVEIRA</a></span>
+          </aside>
         </footer>
 
         <!--========== FIXED ICON ==========-->
-        <a href="#" id="fixedicon" class="fixed_icon">
+        <a href="https://wa.me/5585985962220?text=Ol%C3%A1%2C+gostaria+de+informa%C3%A7%C3%B5es+sobre+o+col%C3%A9gio." target="_blank" id="fixedicon" class="fixed_icon">
             <i class="ri-whatsapp-line"></i>
         </a>
          <!--========== swiper and main js ==========-->

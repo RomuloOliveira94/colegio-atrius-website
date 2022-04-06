@@ -2,46 +2,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 /*=============== VARIABLES CSS ===============*/
 :root {
-  --header-height: 3.5rem;
-
-  /*========== Colors ==========*/
+   /*========== Colors ==========*/
   --first-color:#336699 ;
   --first-color-alt: #020202;
-  --title-color: ;
   --text-color: #020202;
-  --text-color-light: ;
   --white-color: white;
-  --body-color: ;
   --container-color: white;
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: 'Poppins', sans-serif;;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
 
-  /*========== Font weight ==========*/
-  --font-medium: 500;
-  --font-semi-bold: 600;
 
   /*========== z index ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
-}
-
-@media screen and (min-width: 968px) {
-  :root {
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
-  }
 }
 
 /*=============== BASE ===============*/
@@ -72,18 +47,18 @@ a {
 
 
 span{
-  color:var(--first-color)!important;
+  color:var(--first-color);
 }
 
 .main {
   position: relative;
-  top: 15vh;
+  top: 20vh;
 }
 
-/*=============== HEADER & NAV ===============*/
+/*=============== HEADER - MENUS ===============*/
 .header{
   width: 100vw;
-  height: 15vh;
+  height: 20vh;
   box-shadow: 0px 0px 10px #020202c1;
   display: flex;
   flex-direction: column;
@@ -96,19 +71,17 @@ span{
 
 .headings{
   background-color: var(--first-color);
-  width: 100vw;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
+  height: 50%;
 }
 
 .headings-infos{ 
 display: flex;
-justify-content: space-between;
+flex-direction: column;
 align-items: center;
-flex-flow: wrap column;
-text-align: center;
-max-width: 1000px;
-margin: 0 auto;
+justify-content: center;
 }
 
 .headings-infos p{
@@ -121,7 +94,6 @@ margin: 0 auto;
 .social i{
   color: white;
   font-size:1.5rem;
-  width: 100%;
 }
 
 .nav-container {
@@ -187,15 +159,18 @@ margin: 0 auto;
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
+/*=============== HOME ===============*/
+
 .banner-container{
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: wrap;
   background-color: #336699;
-  height: 40vh;
+  height: 50vh;
   width: 100%;
-  margin: 0 auto;
+  margin: auto;
+
 }
 
 .banner-container h1{
@@ -217,8 +192,8 @@ margin: 0 auto;
 }
 
 .banner-container img {
-  width: 400px;
-  margin-bottom: 30px;
+  width: 350px;
+  max-width: 100%;
   -webkit-filter: drop-shadow(5px 5px 0 black)
                   drop-shadow(-1px -1px 0 black);
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)) 
@@ -226,11 +201,7 @@ margin: 0 auto;
 }
 
 
-
-
-/*=============== HOME ===============*/
-
-/*=============== ABOUT ===============*/
+/*=============== SOBRE ===============*/
 
 .about{
   display: flex;
@@ -263,6 +234,7 @@ margin: 0 auto;
 
 .sobre-text img{
   width: 480px;
+  max-width: 100%;
 }
 
 
@@ -337,7 +309,7 @@ font-size: 1.8rem;
   width: 350px;
 }
 
-/*=============== SERVICES ===============*/
+/*=============== SERVIÇOS ===============*/
 
 .services-container{
 display: flex;
@@ -357,24 +329,25 @@ align-items: center;
   font-family: var(--body-font);
   font-size: max(18px, 1.1vw);
   font-weight: 300;
-  width: 50vw;
+  width: 60vw;
 }
 
 
 .services-flex{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   overflow-x: auto;
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto
+;
 }
 
 .services-flex picture{
   flex-shrink: 0;
   background-color: var(--first-color);
-  margin-left: 1.4rem;
   cursor: pointer;
 }
 
@@ -389,11 +362,12 @@ align-items: center;
 }
 
 .services-flex img{
-  width: 372px;
+  max-width: 100%;
+  width: 356px;
 }
 
 
-/*=============== GALLERY ===============*/
+/*=============== GALERIA ===============*/
 .galeria{
   background-color: var(--first-color);
   padding-bottom: 50px;
@@ -420,33 +394,94 @@ flex-direction: column;
   color: white;
 }
 /*=============== FOOTER ===============*/
-footer{
+.footer-infos{
   margin-top: 15vh;
-  height: 35vh;
+  height: 100%;
   width: 100vw;
   background-color: white; 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 }
 
-.footer-infos{
-width: 30vw;
-margin-right:10px ;
+.footer-text{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+width: 100%;
+max-width: 1175px;
+text-align: center;
+margin-bottom: 50px;
+margin-left: auto;
+margin-right: auto;
+}
+
+.footer-text h2, .footer-text h3{
+  font-weight: 300;
+  padding: 2px;
+  font-family: var(--body-font);
+}
+
+.footer-btn{
+  margin-top: 20px;
+  width: 180px;
+  height: 50px;
+  color: white;
+  background-color: var(--first-color);
+  border-radius: 10px;
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: var(--body-font);
+  cursor: pointer;
+}
+
+.footer-btn:hover{
+  background-color: lightblue;
+  color: black;
+}
+
+.footer-btn:active{
+  transform: translate(5px, 5px);
 }
 
 .localizacao{
-  width: 100%;
+  margin-top: 45px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 1920px;
+  height: 400px;
+}
+.footer-rights{
+  background-color: #020202;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: wrap column;
+  margin: 0 auto; 
+  text-align: center;
+}
+
+.footer-rights--text{
+   color: white;
+   font-family: var(--body-font);
+   font-size: 1.1em;
+   font-weight: 600;
+}
+.fa-copyright{
+  color: white;
+  margin-right: 5px;
 }
 
 
 
-
-/*=============== FIXED ICON ===============*/
+/*=============== ZAP ICON ===============*/
 .fixed_icon{
   position: fixed;
   color: white;
-  right: 1rem;
+  left: 1rem;
   bottom: 1rem;
   font-size: 3rem;
   background-color: forestgreen;
@@ -464,13 +499,10 @@ margin-right:10px ;
 }
 
 /*=============== BREAKPOINTS ===============*/
-/* For small devices */
 
 @media (max-width: 840px) {
   .banner-container img {
-    width: 300px;
-    margin-right: 60px;
-    margin-bottom: 20px;
+    width: 250px;
   }
   .sobre-text p{
     width: 400px;
@@ -530,7 +562,15 @@ margin-right:10px ;
   justify-content: flex-start;
   align-items: flex-start;
 }
+
+.services-flex picture{
+  margin-left: 1.4rem;
 }
+picture:last-child {
+  margin-right: 1.4rem;
+}
+}
+
 @media (max-width: 439px) {
   .banner-container img {
     width: 250px;
@@ -538,6 +578,13 @@ margin-right:10px ;
   }
   .banner-container h1{
     font-size: 1.5rem;
+  }
+  .footer-text{
+    width: 80vw;
+  }
+
+  .sobre-text{
+    width: 80vw;
   }
 }
 
@@ -547,10 +594,10 @@ margin-right:10px ;
   }
   .nav-list {
     position: absolute;
-    top: 15.7vh;
+    top: 20vh;
     right: 0;
     width: 40vw;
-    height: 85vh;
+    height: 80vh;
     background:white;
     flex-direction: column;
     align-items: center;
@@ -583,7 +630,3 @@ margin-right:10px ;
     transform: translateX(0);
   }
 }
-/* For medium devices */
-
-
-/* For large devices */
