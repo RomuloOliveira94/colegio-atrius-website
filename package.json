@@ -1,7 +1,6 @@
 {
   "name": "colegio-atrius-website",
   "version": "1.0.0",
-  "main": "./src/js/main.js",
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.3",
     "acorn": "^8.7.0",
@@ -89,8 +88,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel src/index.html",
-    "build": "parcel build src/index.html"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html"
   },
   "keywords": [],
   "author": "",
