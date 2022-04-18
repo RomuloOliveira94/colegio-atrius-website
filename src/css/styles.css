@@ -228,22 +228,22 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-max-width: 1200px;
+max-width: 1000px;
 margin: 0 auto;
 }
 
 .sobre-text img{
-  width: 480px;
+  width: 500px;
   max-width: 100%;
 }
 
 
 .sobre-text p{
+  flex-wrap: wrap;
   font-family: var(--body-font);
-  font-size: max(18px, 1.1vw);
-  width: 600px;
-  margin: 30px;
+  font-size: 1.2rem;
   text-align: center;
+  margin: 30px auto;
   font-weight: 300;
 }
 /*=============== DIFERENCIAIS ===============*/
@@ -585,6 +585,10 @@ picture:last-child {
 
   .sobre-text{
     width: 80vw;
+  }
+  .sobre-text p{
+    width:100%;
+    margin: 30px auto;
   }
 }
 
