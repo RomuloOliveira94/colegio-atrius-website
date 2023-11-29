@@ -50,9 +50,12 @@ span{
   color:var(--first-color);
 }
 
+.error{
+  color: red;
+}
+
 .main {
   position: relative;
-  top: 20vh;
 }
 
 /*=============== HEADER - MENUS ===============*/
@@ -64,9 +67,8 @@ span{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: fixed;
   background: white;
-  z-index: 1;
+  
 }
 
 .headings{
@@ -127,6 +129,9 @@ justify-content: center;
 .nav-list {
   list-style: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .nav-list li {
@@ -159,7 +164,7 @@ justify-content: center;
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
-/*=============== HOME ===============*/
+/*=============== BANNER ===============*/
 
 .banner-container{
   display: flex;
@@ -167,10 +172,13 @@ justify-content: center;
   align-items: center;
   flex-flow: wrap;
   background-color: #336699;
-  height: 50vh;
+  height: 80vh;
   width: 100%;
   margin: auto;
-
+  background-image: url('../img/banner-mat-2023_0.webp');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .banner-container h1{
@@ -191,14 +199,14 @@ justify-content: center;
   font-weight: 100;
 }
 
-.banner-container img {
+/* .banner-container img {
   width: 350px;
   max-width: 100%;
   -webkit-filter: drop-shadow(5px 5px 0 black)
                   drop-shadow(-1px -1px 0 black);
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)) 
           drop-shadow(-1px -1px 0 black);
-}
+} */
 
 
 /*=============== SOBRE ===============*/
@@ -207,13 +215,12 @@ justify-content: center;
   display: flex;
   align-items: center;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%; 
+  justify-content: space-between; 
+  height: 100%;
   margin-bottom: 50px;
 }
 
 .titulos{
-
   font-family: var(--body-font);
   font-weight: lighter;
   font-size: 3.5rem;
@@ -227,23 +234,22 @@ justify-content: center;
 display: flex;
 justify-content: center;
 align-items: center;
-flex-wrap: wrap;
-max-width: 1000px;
 margin: 0 auto;
+flex-direction: column;
 }
 
 .sobre-text img{
-  width: 500px;
+  width: 480px;
   max-width: 100%;
 }
 
 
 .sobre-text p{
-  flex-wrap: wrap;
   font-family: var(--body-font);
-  font-size: 1.2rem;
+  font-size: clamp(.8em, .8em + 1vw, 1.2em);
+  max-width: 600px;
+  margin: 30px;
   text-align: center;
-  margin: 30px auto;
   font-weight: 300;
 }
 /*=============== DIFERENCIAIS ===============*/
@@ -362,7 +368,8 @@ align-items: center;
 }
 
 .services-flex img{
-  max-width: 100%;
+  min-width: 360px;
+  min-height: 360px;
   width: 356px;
 }
 
@@ -395,8 +402,6 @@ flex-direction: column;
 }
 /*=============== FOOTER ===============*/
 .footer-infos{
-  margin-top: 15vh;
-  height: 100%;
   width: 100vw;
   background-color: white; 
   display: flex;
@@ -447,7 +452,6 @@ margin-right: auto;
 }
 
 .localizacao{
-  margin-top: 45px;
   max-width: 100%;
   max-height: 100%;
   width: 1920px;
@@ -478,6 +482,10 @@ margin-right: auto;
 
 
 /*=============== ZAP ICON ===============*/
+.icon-container{
+  position: relative;
+}
+
 .fixed_icon{
   position: fixed;
   color: white;
@@ -489,7 +497,7 @@ margin-right: auto;
   display: inline-flex;
   border-radius: .5rem;
   padding: .45rem;
-  z-index: var(--z-tooltip);
+  z-index: 10;
   transition: .4s;
   animation: zap .5s ease-in 0s infinite alternate;
 }
@@ -501,8 +509,11 @@ margin-right: auto;
 /*=============== BREAKPOINTS ===============*/
 
 @media (max-width: 840px) {
-  .banner-container img {
+  /* .banner-container img {
     width: 250px;
+  } */
+  .banner-container {
+    background-image: url('../img/banner-mat-2023-mobile.png');
   }
   .sobre-text p{
     width: 400px;
@@ -572,10 +583,11 @@ picture:last-child {
 }
 
 @media (max-width: 439px) {
-  .banner-container img {
+
+  /* .banner-container img {
     width: 250px;
      
-  }
+  } */
   .banner-container h1{
     font-size: 1.5rem;
   }
@@ -586,10 +598,7 @@ picture:last-child {
   .sobre-text{
     width: 80vw;
   }
-  .sobre-text p{
-    width:100%;
-    margin: 30px auto;
-  }
+
 }
 
 @media (max-width: 999px) {
@@ -600,23 +609,36 @@ picture:last-child {
     position: absolute;
     top: 20vh;
     right: 0;
-    width: 40vw;
-    height: 80vh;
+    width: 100vw;
+    height: 20vh;
     background:white;
-    flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-around;
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
     border: 1px solid rgba(0, 0, 0, 0.279);
-    z-index: 1000;
+    z-index: 3;
   }
   .nav-list li {
-    margin-left: 0;
+    margin: 8px auto;
     opacity: 0;
+    border: 1px solid rgba(0, 0, 0, 0.279);
+    padding: 4px;
+    border-radius: 4px;
   }
   .mobile-menu {
     display: block;
+  }
+
+  .form-adress {
+    flex-direction: column;
+  }
+  .form-select {
+    flex-direction: column;
+  }
+  .form-adress > input{
+    width:100%;
   }
 }
 
@@ -633,4 +655,105 @@ picture:last-child {
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+/*=============== ZAPFORM ===============*/
+
+ /* body {
+  background-color: var(--first-color);
+  text-align: center;
+
+} */
+
+input , select , textarea{
+  border-radius: 5px;
+}
+
+
+.container {
+  margin: auto;
+  padding: 12px;
+  background-color: var(--first-color);
+}
+
+.header-form{
+  width: 90%;
+  margin: 8px auto;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-form > a > img {
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.form-matricula{
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  border: 1px solid #6666662b;
+  border-radius: 8px;
+  padding: 24px;
+  max-width: 90%;
+}
+
+.form-text-input{
+  width: 90%;
+  padding: 8px;
+  margin: auto;
+}
+
+.form-adress {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto;
+  width: 90%;
+}
+
+.form-select {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+}
+
+.form-select > div > select {
+  width: 90%;
+  padding: 8px;
+  margin: 12px auto;
+}
+
+.form-footer {
+  border: 1px solid #666;
+  border-radius: 8px;
+  background-color: #336699;
+  padding: 12px;
+  margin: auto;
+  font-size: clamp(.8em, .8em + 1vw, 1.2em);
+  color: #fff;
+}
+
+.form-button {
+  margin: 8px auto;
+  padding: 8px;
+  min-width: 250px;
+  background-color: rgb(64, 232, 64);
+  color: rgb(25, 24, 24);
+}
+
+.form-text-area{
+  width: 90%;
+  padding: 8px;
+  margin: auto;
 }
