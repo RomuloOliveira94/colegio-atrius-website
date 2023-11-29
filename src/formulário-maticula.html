@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matriculas 2023</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header-form">
+            <div>
+                <h1>Fomulário de Pré-matricula</h1>
+                <p>Garanta sua matricula com desconto</p>
+            </div>
+            <a href="index.html">
+                <img src="img/logo-nomeada.png" alt="logo-atrius" width="250px"/>
+            </a>
+        </header>
+        <form class="form-matricula" method="POST">
+            <label for="nome_resp">Nome do Responsável</label>
+            <input type="text" class="form-text-input" name="nome_resp" id="nome_resp" placeholder="Nome do Responsável">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-text-input" name="cpf" id="cpf" placeholder="CPF">
+            <div class="form-adress">
+                <label for="endereco_rua">Endereço</label>
+                <input type="text" class="form-text-input" name="endereco_rua" id="endereco_rua" placeholder="Rua">
+                <label for="endereco_numero">Número</label>
+                <input type="text" class="form-text-input" name="endereco_numero" id="endereco_numero" placeholder="Número">
+                <label for="endereco_bairro">Bairro</label>
+                <input type="text" class="form-text-input" name="endereco_bairro"  id="endereco_bairro" placeholder="bairro">
+            </div>
+            <label for="nome_aluno">Nome do Aluno</label>
+            <input type="text" class="form-text-input" name="nome_aluno" id="nome_aluno" placeholder="Aluno">
+            <div class="form-select">
+                <div>
+                    <label for="serie">Série</label>
+                    <select name="serie" id="serie">
+                        <option value="Infantil I">Infantil I</option>
+                        <option value="Infantil II">Infantil II</option>
+                        <option value="Infantil III">Infantil III</option>
+                        <option value="Infantil IV">Infantil IV</option>
+                        <option value="Infantil V">Infantil V</option>
+                        <option value="1 Ano">1 Ano</option>
+                        <option value="2 Ano">2 Ano</option>
+                        <option value="3 Ano">3 Ano</option>
+                        <option value="4 Ano">4 Ano</option>
+                        <option value="5 Ano">5 Ano</option>
+                        <option value="6 Ano">6 Ano</option>
+                        <option value="7 Ano">7 Ano</option>
+                        <option value="8 Ano">8 Ano</option>
+                        <option value="9 Ano">9 Ano</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="turno">Turno</label>
+                    <select name="turno" id="turno" >
+                        <option value="Manhã">Manhã</option>
+                        <option value="Tarde">Tarde</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="pagamento">Forma de Pagamento</label>
+                    <select name="pagamento" id="pagamento">
+                        <option value="Pix">Pix</option>
+                        <option value="Cartão">Cartão</option>
+                        <option value="Dinheiro">Dinheiro</option>
+                    </select>
+                </div>
+            </div>
+            <label for="obs">Você tem algum observação?</label>
+            <textarea class="form-text-area" name="obs" placeholder="Digite aqui" rows="4" cols="30"></textarea>
+
+            <div class="g-recaptcha" data-sitekey="6LcMgRYpAAAAANtzxqwmxMFjn_zBVVEjNAoz7w7l"></div>
+            <button onclick="submitForm()" class="form-button">Enviar</button>
+            <small>*Você sera redirecionado(a) para nosso whatsapp, para o envio do formulario</small>
+            <footer class="form-footer">
+                <small>
+                    <ul>
+                        <h3>Obs.: Comparecer ao colégio com as seguintes documentações:</h3>
+                        <li>RG e CPF (Responsáveis)</li>
+                        <li>Certidão de nascimento (aluno)</li>
+                        <li>Comprovante de Endereço</li>
+                        <li>Foto 3x4 (aluno)</li>
+                        <li>Declaração de Transferência e/ou Histórico escolar</li>
+                        <li>Pasta escolar</li>
+                    </ul>                               
+                </small>
+            </footer>
+        </form>
+    
+        
+    </main>
+</body>
+<script src="./js/whats-app-form.js"></script>
+</html>
