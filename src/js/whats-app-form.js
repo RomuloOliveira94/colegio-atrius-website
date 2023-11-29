@@ -1,5 +1,5 @@
 
-const phoneNumber = "5585981337203"
+const phoneNumber = "5585985962220"
 
 function submitForm() {
     document.querySelector('.form-matricula').addEventListener('submit', getFormData)
@@ -33,7 +33,6 @@ function getFormData(e) {
         nomeAluno,
         serie,
         turno,
-        pagamento,
         obs
     }
 
@@ -52,7 +51,6 @@ function sendToZap(data) {
     Nome do aluno: *${data.nomeAluno}*
     Série: *${data.serie}*
     Turno: *${data.turno}*
-    Forma de Pagamento: *${data.pagamento}*
     Observações: *${data.obs}*
     
     *Obs.: Comparecer ao colégio com as seguintes documentações:*
