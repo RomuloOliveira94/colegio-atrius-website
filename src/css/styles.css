@@ -175,10 +175,10 @@ justify-content: center;
   height: 80vh;
   width: 100%;
   margin: auto;
-  background-image: url('../img/banner-mat-2023_0.webp');
+  /* background-image: url('../img/banner-mat-2023_0.webp');
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
 }
 
 .banner-container h1{
@@ -186,7 +186,7 @@ justify-content: center;
   color: white;
   font-weight: bolder;
   text-align: center;
-  font-size: 2rem;
+  font-size: 4rem;
   
 }
 
@@ -195,18 +195,18 @@ justify-content: center;
   color: white;
   font-weight: bolder;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 3rem;
   font-weight: 100;
 }
 
-/* .banner-container img {
-  width: 350px;
+ .banner-container img {
+  width: 600px;
   max-width: 100%;
   -webkit-filter: drop-shadow(5px 5px 0 black)
                   drop-shadow(-1px -1px 0 black);
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5)) 
           drop-shadow(-1px -1px 0 black);
-} */
+}
 
 
 /*=============== SOBRE ===============*/
@@ -512,8 +512,11 @@ margin-right: auto;
   /* .banner-container img {
     width: 250px;
   } */
-  .banner-container {
+  /* .banner-container {
     background-image: url('../img/banner-mat-2023-mobile.webp');
+  } */
+  .banner-container h2{
+    font-size: 2rem;
   }
   .sobre-text p{
     width: 400px;
@@ -589,7 +592,7 @@ picture:last-child {
      
   } */
   .banner-container h1{
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
   .footer-text{
     width: 80vw;
